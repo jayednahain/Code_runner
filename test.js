@@ -253,7 +253,7 @@ function caesarCipher(s, k) {
 // console.log(getSubString([2,7,11,15],9));
 
 
-function test(s) {
+// function test(s) {
 
 
      // let var1 = "";
@@ -338,8 +338,8 @@ function test(s) {
           
      // }
 
-     console.log("total lenght: " + s.length)
-     console.log("running cycle: " + parseInt(s.length / 2))
+     // console.log("total lenght: " + s.length)
+     // console.log("running cycle: " + parseInt(s.length / 2))
 
      // let flag = '';
      // for (let i = 0; i < parseInt(s.length / 2); i++) {
@@ -367,46 +367,39 @@ function test(s) {
      
 
 
-     for (let i = 0; i < parseInt(s.length / 2); i++) {
-          let temp = "";
-          for (let j = 0; j <= i; j++) { temp += s[j]; }
-          let flag = true;
+//      for (let i = 0; i < parseInt(s.length / 2); i++) {
+//           let temp = "";
+//           for (let j = 0; j <= i; j++) { temp += s[j]; }
+//           let flag = true;
 
-          // console.log("temp data:========== " + temp)
-          let runningTemp = "";
+//           // console.log("temp data:========== " + temp)
+//           let runningTemp = "";
 
-          for (let k = i + 1; k < s.length - 1; k += temp.length) {
+//           for (let k = i + 1; k < s.length - 1; k += temp.length) {
                
-               runningTemp = s.substr(k, temp.length)
+//                runningTemp = s.substr(k, temp.length)
 
-               // console.log("==========" + runningTemp)
-               if (temp != runningTemp) {
-                    flag = false;
-                    console.log("false!!")
-                    break;
+//                // console.log("==========" + runningTemp)
+//                if (temp != runningTemp) {
+//                     flag = false;
+//                     console.log("false!!")
+//                     break;
 
-               }
-               console.log("-- true value value !!!")
+//                }
+//                console.log("-- true value value !!!")
+//           }
 
+//           if (flag) {
+//                console.log("---------true flag called !")
+//                return true;
 
-
-          }
-
-          if (flag) {
-               console.log("---------true flag called !")
-               return true;
-
-          }
+//           }
 
 
-     }
+//      }
 
-
-
-
-     return false;
-
-}
+//      return false;
+// }
 
 
 
@@ -502,22 +495,41 @@ function test(s) {
 
 // console.log(" final result : "+finalSub("bb"))
 
-function test(nums) {
-     let leftSide = 0;
-     let rightSide = nums.length - 1;
-     while (leftSide < rightSide) {
-          console.log("++ : " +leftSide)
-          leftSide++;
-          console.log("-- :" + rightSide)
-          rightSide--;
+// function test(nums) {
+//      let leftSide = 0;
+//      let rightSide = nums.length - 1;
+//      while (leftSide < rightSide) {
+//           console.log("++ : " +leftSide)
+//           leftSide++;
+//           console.log("-- :" + rightSide)
+//           rightSide--;
 
-     }
-     // console.log(leftSide)
-     // console.log(rightSide)
-     // for (let i = 0; i < nums.length; i++) {
-     //      console.log(nums[i])
-     // }
+//      }
+//      // console.log(leftSide)
+//      // console.log(rightSide)
+//      // for (let i = 0; i < nums.length; i++) {
+//      //      console.log(nums[i])
+//      // }
      
+// }
+
+// console.log(test([1,2,3,4,5,6,7]))
+
+let data = [0,5,8,7,8,4,5,6,9,8,5,2,5]
+// console.log(data)
+
+
+function sum(start,end) {
+     let temp =0;
+    for (let i = start; i < end; i++) {
+     //    console.log(data[i])
+        temp = temp + data[i]
+    }
+
+    return temp;
+    
 }
 
-console.log(test([1,2,3,4,5,6,7]))
+
+
+console.log(sum(0,5))
