@@ -515,21 +515,37 @@ function caesarCipher(s, k) {
 
 // console.log(test([1,2,3,4,5,6,7]))
 
-let data = [0,5,8,7,8,4,5,6,9,8,5,2,5]
-// console.log(data)
+// let data = [0,5,8,7,8,4,5,6,9,8,5,2,5]
+// // console.log(data)
 
 
-function sum(start,end) {
-     let temp =0;
-    for (let i = start; i < end; i++) {
-     //    console.log(data[i])
-        temp = temp + data[i]
-    }
+// function sum(start,end) {
+//      let temp =0;
+//     for (let i = start; i < end; i++) {
+//      //    console.log(data[i])
+//         temp = temp + data[i]
+//     }
 
-    return temp;
+//     return temp;
     
+// }
+
+
+
+// console.log(sum(0,5))
+
+class Node {
+     constructor(value){
+          console.log("comming value: "+value)
+          this.value = value;
+          console.log("this value: "+JSON.stringify(this))
+          this.next = null;
+     }
 }
 
 
 
-console.log(sum(0,5))
+try{
+     const objectNode = new Node("5")
+}
+catch(e){console.log(e.message)}
