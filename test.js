@@ -534,12 +534,105 @@ function caesarCipher(s, k) {
 
 // console.log(sum(0,5))
 
+// class Node {
+//      constructor(value){
+//           console.log("comming value: "+value)
+//           this.value = value;
+//           console.log("this value: "+JSON.stringify(this))
+//           this.next = null;
+//      }
+// }
+
+
+
+// try{
+//      const objectNode = new Node("5")
+// }
+// catch(e){console.log(e.message)}
+
+class BankAccount {
+     constructor(accountNumber) {
+       // Encapsulated properties
+       let _accountNumber = accountNumber;
+       let _balance = 0;
+   
+       // Public methods to interact with the object
+       this.getAccountNumber = () => _accountNumber;
+       this.getBalance = () => _balance;
+       this.deposit = (amount) => {
+         _balance += amount;
+       };
+       this.withdraw = (amount) => {
+         if (amount <= _balance) {
+           _balance -= amount;
+         } else {
+           console.log('Insufficient balance.');
+         }
+       };
+     }
+   }
+   
+   // Create a BankAccount object
+   const account = new BankAccount('12345');
+   
+   // Access properties through methods (encapsulation)
+//    console.log('Account Number:', account.getAccountNumber()); // Output: '12345'
+//    console.log('Balance:', account.getBalance());               // Output: 0
+   
+//    // Deposit and withdraw funds
+//    account.deposit(500);
+//    account.withdraw(500);
+//    console.log('Balance after transactions:', account.getBalance()); 
+
+// let arr_one = [1,2,3];
+// let arr_two = [4,5,6];
+
+
+function medianOfArray(array){
+    var length = array.length;
+
+     //find odd number
+    if (length % 2==1){
+        
+        //3,5,7 something
+        // find the index
+        let index = Math.floor(length/2);
+
+        // search va lue with the index;
+        return array[index] ;
+    }
+    
+    //find even
+    //4,8,10
+    else{
+        
+        return (array[length/2]+array[length/2-1])/2;
+        // return(length/2)
+    }
+
+}
+
+// let  currentArray= [1, 2, 3, 4]
+// try
+// {
+//      console.log(medianOfArray(currentArray))
+// }
+// catch(e){console.log(e.message)}
+
+
 class Node {
      constructor(value){
-          console.log("comming value: "+value)
-          this.value = value;
-          console.log("this value: "+JSON.stringify(this))
+
+
+          let _value =value;// we cant access directly;
+
+          this.value = value; // we can access directly
+
           this.next = null;
+          this.currentNodeInfo = ()=> {
+               return this.value +5
+          };
+          this.nextNodeInfo = ()=> this.next
      }
 }
 
@@ -547,5 +640,6 @@ class Node {
 
 try{
      const objectNode = new Node("5")
+     console.log(objectNode.currentNodeInfo())
 }
 catch(e){console.log(e.message)}
