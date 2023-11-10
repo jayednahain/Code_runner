@@ -622,24 +622,31 @@ function medianOfArray(array){
 
 class Node {
      constructor(value){
-
-
-          let _value =value;// we cant access directly;
-
-          this.value = value; // we can access directly
-
+          this.value = value; // current node value 
           this.next = null;
-          this.currentNodeInfo = ()=> {
-               return this.value +5
-          };
-          this.nextNodeInfo = ()=> this.next
      }
 }
 
+//creating nodes
+const a = new Node('A');
+const b = new Node('B');
+const c = new Node('C');
+const d = new Node('D');
+const e = new Node('E');
+
+// connect one node to another node
+a.next = b;
+b.next = c;
+d.next = e;
+
+//show link list
+function showLinkList(head) {
+     let current = head;
+     console.log(current)
+}
 
 
 try{
-     const objectNode = new Node("5")
-     console.log(objectNode.currentNodeInfo())
+     showLinkList(a)
 }
 catch(e){console.log(e.message)}
