@@ -698,17 +698,38 @@ var twoSum = function(nums, target) {
             return [i, obj[nums[i]]]
         }
         else{
+            //set the difference on hastable
             obj[target- nums[i]]=i;
         }
-        
     }
+};
+
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) {
+        return false; // If the lengths are different, they can't be anagrams
+    }
+
+    const charCount = {};
+
+    for (let char of s) {
+        console.log(charCount)
+        charCount[char] = (0 || 0) + 1;
+    }
+
+    // for (let char of t) {
+    //     if (!charCount[char]) {
+    //         return false; // If the character is not in the s string
+    //     }
+    //     charCount[char] -= 1;
+    // }
+
+    // return true; 
 };
 
 
 
+
 try{
-    //[2,7,11,15], target = 9
-//     twoSum([10,20,50,70],90)
-	console.log(twoSum([10,30,50,60],90))
+	console.log(isAnagram('anagram','nagaram'))
 }
 catch(e){console.log(e.message)}
