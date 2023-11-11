@@ -646,7 +646,69 @@ function showLinkList(head) {
 }
 
 
+// try{
+//      showLinkList(a)
+// }
+// catch(e){console.log(e.message)}
+
+
+// var twoSum = function(nums, target) {
+// 	var hasTable={};
+
+// 	for (let i = 0; i < nums.length; i++) {
+// 		// let currentElement = nums[i];
+// 		let difference = target - nums[i];
+		
+// 		if (hasTable[nums[i]] != undefined){
+
+// 			console.log("-----"+JSON.stringify(hasTable) )
+// 		}
+// 		else{
+// 			hasTable[difference]=i
+// 		}
+// 		console.log(hasTable)
+// 	}
+// 	// console.log(hasTable)
+// };
+
+function findSum(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left < right) {
+        let sum = arr[left] + arr[right];
+		console.log("current sum: "+ sum)
+        if (sum === target) {
+            return [ arr[left] ,arr[right] ];
+        } else if (sum < target) {
+			console.log("++++++++++++")
+            left++;
+        } else {
+			console.log("------------")
+            right--;
+        }
+    }
+    return -1;
+}
+
+var twoSum = function(nums, target) {
+    let obj = {};
+    for (let i = 0; i < nums.length; i++) {
+        if (obj[nums[i]] != undefined){
+            return [i, obj[nums[i]]]
+        }
+        else{
+            obj[target- nums[i]]=i;
+        }
+        
+    }
+};
+
+
+
 try{
-     showLinkList(a)
+    //[2,7,11,15], target = 9
+//     twoSum([10,20,50,70],90)
+	console.log(twoSum([10,30,50,60],90))
 }
 catch(e){console.log(e.message)}
