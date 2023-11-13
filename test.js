@@ -704,6 +704,8 @@ var twoSum = function(nums, target) {
     }
 };
 
+
+isAnagram
 var isAnagram = function (s, t) {
     if (s.length !== t.length) {
         return false;
@@ -718,6 +720,10 @@ var isAnagram = function (s, t) {
     for (let i of t) {
         
         if (table[i] == undefined) {
+            // (!table[i])
+            //check this index has values or not
+            //if there is no value this undefine 
+            // will be true
             return false
         }
         table[i] = table[i] - 1;
@@ -726,6 +732,20 @@ var isAnagram = function (s, t) {
         }
         console.log(table)
     }
+    return true;
+};
+
+
+var isAnagram = function (s, t) {
+    const table = {};
+    if (s.length !== t.length) {
+        return false;
+    }
+    for (let i = 0; i < s.length; i++) {
+        table[s[i]] = (table[s[i]] || 0) + 1;
+        console.log(table)
+    }
+
     return true;
 };
 
@@ -744,6 +764,6 @@ findFrequency = (words, letter) => {
 try {
     // findFrequency("JSESSSON")
     // console.log(findFrequency("JSESSSSON","S"))
-	console.log(isAnagram("aacc", 'ccac'))
+	console.log(isAnagram("aacc", 'czac'))
 }
 catch(e){console.log(e.message)}
