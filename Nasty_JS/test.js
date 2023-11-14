@@ -733,21 +733,6 @@ var isAnagram = function (s, t) {
     return true;
 };
 
-
-var isAnagram = function (s, t) {
-    const table = {};
-    if (s.length !== t.length) {
-        return false;
-    }
-    for (let i = 0; i < s.length; i++) {
-        table[s[i]] = (table[s[i]] || 0) + 1;
-        console.log(table)
-    }
-
-    return true;
-};
-
-
 findFrequency = (words, letter) => {
     let table = {};
     for (let i of words) {
@@ -757,11 +742,26 @@ findFrequency = (words, letter) => {
     return table[letter]
 }
 
+// Input: nums1 = [1,3], nums2 = [2]
+// Output: 2.00000
+
+
+
+function medianOfArray(array) {
+    if (array.length % 2 == 1) {
+        return array[Math.floor(array.length / 2)]
+    }
+    else { 
+
+        return (array)
+    }
+    console.log(array)
+}
+
 
 
 try {
-    // findFrequency("JSESSSON")
-    // console.log(findFrequency("JSESSSSON","S"))
-	console.log(isAnagram("aacc", 'czac'))
+    
+    console.log(medianOfArray([1,2,3,4,5,6,7]))
 }
-catch(e){console.log(e.message)}
+catch (e) { console.log(e.message) }
