@@ -704,32 +704,64 @@ var twoSum = function(nums, target) {
     }
 };
 
-var isAnagram = function(s, t) {
+var isAnagram = function (s, t) {
     if (s.length !== t.length) {
-        return false; // If the lengths are different, they can't be anagrams
+        return false;
     }
-
-    const charCount = {};
-
+    const table = {};
     for (let char of s) {
-        console.log(charCount)
-        charCount[char] = (0 || 0) + 1;
+        table[char] = (table[char] || 0) + 1;
+        console.log(table)
     }
+    console.log("____________")
 
-    // for (let char of t) {
-    //     if (!charCount[char]) {
-    //         return false; // If the character is not in the s string
-    //     }
-    //     charCount[char] -= 1;
-    // }
-
-    // return true; 
+    for (let i of t) {
+        
+        if (table[i] == undefined) {
+            // (!table[i])
+            //check this index has values or not
+            //if there is no value this undefine 
+            // will be true
+            return false
+        }
+        table[i] = table[i] - 1;
+        if (table[i] < 0) {
+            return false
+        }
+        console.log(table)
+    }
+    return true;
 };
 
 
+var isAnagram = function (s, t) {
+    const table = {};
+    if (s.length !== t.length) {
+        return false;
+    }
+    for (let i = 0; i < s.length; i++) {
+        table[s[i]] = (table[s[i]] || 0) + 1;
+        console.log(table)
+    }
+
+    return true;
+};
 
 
-try{
-	console.log(isAnagram('anagram','nagaram'))
+findFrequency = (words, letter) => {
+    let table = {};
+    for (let i of words) {
+        table[i] = (table[i] || 0) + 1
+        
+    }
+    return table[letter]
+}
+
+
+
+try {
+    // findFrequency("JSESSSON")
+    // console.log(findFrequency("JSESSSSON","S"))
+	console.log(isAnagram("aacc", 'czac'))
 }
 catch(e){console.log(e.message)}
