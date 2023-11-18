@@ -760,37 +760,11 @@ function medianOfArray(array) {
 
 
 
-// try {
-    
-//     console.log(medianOfArray([1,2,3,4,5,6,7]))
-// }
-// catch (e) { console.log(e.message) }
 
 //26. Remove Duplicates from Sorted Array
 //https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
- removeDuplicates =(nums)=> {
 
-    for (let i = 0; i < nums.length; i++) {
-        console.log("i == "+i)
-        if (nums[i] == nums[i+1]){
-            //splice will remove the duplicate item inside the list
-            console.log("+++++ value: "+i)
-            nums.splice(i+1,1)
-            i--;
-            console.log("-- value: "+i)
-        }
-
-    }
-    
-    return nums
-};
-
-try {
-    
-    console.log(removeDuplicates([5,6,7,7,8,8,9,10,12,12]))
-}
-catch (e) { console.log(e.message) }
 
 /*
 
@@ -853,3 +827,43 @@ const removeDuplicates = (nums, j = 0) => {
     return ++j;
 };
 */ 
+
+
+removeDuplicates =(nums)=> {
+
+    // let temp=[];
+    // for (let i = 0; i < nums.length - 1; i++) {
+    //     if (nums[i] == nums[i + 1]) {
+    //         temp.push("_")
+    //         nums.splice(i + 1, 1);
+    //         i--;
+    //     }
+    // }
+    // return nums.length;
+
+    return [... new Set(nums)].length
+
+    
+};
+
+
+//https://leetcode.com/problems/remove-element/
+//https://baffinlee.com/leetcode-javascript/problem/remove-element.html
+var removeElement = function(nums, val) {
+    var count  = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            count = count+1
+        }
+    }
+    
+    // return nums.filter((j)=> j!= val).length;
+};
+
+
+try {
+    //[3,2,2,3]
+    //3
+    console.log(removeElement([3,2,2,3,9,9,9,9,8,7,6,5],9))
+}
+catch (e) { console.log(e.message) }
