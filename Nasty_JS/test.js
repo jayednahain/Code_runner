@@ -847,23 +847,37 @@ removeDuplicates =(nums)=> {
 };
 
 
+//faisal bhai problem
+function hairabba(number) {
+    let limit = number * 2;
+    let reduce = 0;
+    for (let i = 1; i < limit; i++) {
+        if (number > i) {
+            console.log(i)
+        }
+        if (number <= i ) {
+            console.log(i - reduce);
+            reduce = reduce +2
+        } 
+    }
+}
+
 //https://leetcode.com/problems/remove-element/
 //https://baffinlee.com/leetcode-javascript/problem/remove-element.html
 var removeElement = function(nums, val) {
-    var count  = 0;
+    var count = 0;
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] !== val) {
-            count = count+1
+            nums[count] = nums[i];
+            count = count + 1;
         }
     }
-    
-    // return nums.filter((j)=> j!= val).length;
+    return count;
 };
 
-
 try {
-    //[3,2,2,3]
-    //3
-    console.log(removeElement([3,2,2,3,9,9,9,9,8,7,6,5],9))
+    // hairabba(10)
+    removeElement([1,2,3,4,3,3,3,4,5,6],3)
+
 }
 catch (e) { console.log(e.message) }
