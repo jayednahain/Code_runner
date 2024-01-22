@@ -875,9 +875,23 @@ var removeElement = function(nums, val) {
     return count;
 };
 
-try {
-    // hairabba(10)
-    removeElement([1,2,3,4,3,3,3,4,5,6],3)
+var plusOne = function(digits) {
+    return [...digits.slice(0, -1),  ...(digits[digits.length - 1] + 1).toString().split('')]
+ };
 
+
+
+
+// https://leetcode.com/problems/roman-to-integer/description/
+
+
+
+var romanToInt = function(s) {
+    console.log(s)
+    
+};
+
+try {
+    romanToInt(5)
 }
 catch (e) { console.log(e.message) }
