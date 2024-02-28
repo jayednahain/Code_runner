@@ -864,34 +864,55 @@ function hairabba(number) {
 
 //https://leetcode.com/problems/remove-element/
 //https://baffinlee.com/leetcode-javascript/problem/remove-element.html
-var removeElement = function(nums, val) {
-    var count = 0;
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== val) {
-            nums[count] = nums[i];
-            count = count + 1;
-        }
-    }
-    return count;
-};
+// var removeElement = function(nums, val) {
+//     var count = 0;
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] !== val) {
+//             nums[count] = nums[i];
+//             count = count + 1;
+//         }
+//     }
+//     return count;
+// };
 
-var plusOne = function(digits) {
-    return [...digits.slice(0, -1),  ...(digits[digits.length - 1] + 1).toString().split('')]
- };
+// var plusOne = function(digits) {
+//     return [...digits.slice(0, -1),  ...(digits[digits.length - 1] + 1).toString().split('')]
+//  };
 
 
 
 
 // https://leetcode.com/problems/roman-to-integer/description/
-
-
-
-var romanToInt = function(s) {
-    console.log(s)
+// var romanToInt = function(s) {
+//     console.log(s)
     
+// };
+
+// try {
+//     romanToInt(5)
+// }
+// catch (e) { console.log(e.message) }
+
+// higher order function
+//example
+
+const withLog = (func) => {
+
+    return (...args) => {
+        
+        console.log(args)
+        
+        
+        console.log(`Calling function with arguments: ${args}`);
+        
+        const result = func(...args);
+
+        console.log(`Function result: ${result}`);
+        
+        return result;
+    };
 };
 
-try {
-    romanToInt(5)
-}
-catch (e) { console.log(e.message) }
+const add = (a, b) => a + b;
+const loggedAdd = withLog(add);
+loggedAdd(2, 3);
