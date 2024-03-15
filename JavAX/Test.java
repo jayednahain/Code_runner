@@ -10,13 +10,8 @@ public class Test {
         teacherObj.gender ="male";
         teacherObj.phoneNumber = 4554645;
 
-        // teacherObj.displayPhoneNumber();
+        teacherObj.displayPhoneNumber();
 
-        System.out.println(teacherObj.name);
-        System.out.println(teacherObj.gender);
-        System.out.println(teacherObj.phoneNumber);
-
-        System.out.println(teacherObj.getClass().getDeclaredFields());      
     }
    
 }
