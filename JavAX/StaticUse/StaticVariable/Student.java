@@ -1,10 +1,15 @@
 package StaticUse.StaticVariable;
-
+//109 playlist
 public class Student {
     
     String Name;
     int Id;
+    
     static String UniversityName = "LU";
+    // this variable is common 
+    // not need to update from user
+    // so we keep it as static
+
 
     Student(String n, int i) {
         Name = n;
