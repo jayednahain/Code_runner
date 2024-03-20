@@ -27,12 +27,19 @@ public class Problems {
     //     }
     //     return false;
     // }
-        // 219
+    
+    
+    // 219
     // https://leetcode.com/problems/contains-duplicate-ii/description/
-
-    public void containsNearbyDuplicate(int[] nums, int k) {
-
-
-        
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        for (int i = 0; i < nums.length-1; i++) {
+            if(nums[i]==nums[i+1]){
+                return true;
+            }
+            else if(nums[i]+nums[i+1]<=k){
+                return true;
+            }
+        }
+        return false;
     }
 }

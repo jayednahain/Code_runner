@@ -8,8 +8,10 @@ public class Test {
         Test obj = new Test();
         // obj.containsDuplicate(test);
 
-        int[] test = {1,1,2,3,4,5,6};
+        int[] test = {1,2,3,1};
         // boolean containsDuplicate = obj.containsDuplicateUsingSort(test);
+        Problems prob = new Problems();
+        prob.containsNearbyDuplicate(test, 3);
     }
 
     
