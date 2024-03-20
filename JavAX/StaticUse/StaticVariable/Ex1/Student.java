@@ -1,4 +1,5 @@
-package StaticUse.StaticVariable;
+package StaticUse.StaticVariable.Ex1;
+
 //109 playlist
 public class Student {
     
