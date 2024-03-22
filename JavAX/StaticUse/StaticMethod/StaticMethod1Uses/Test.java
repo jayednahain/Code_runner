@@ -1,4 +1,3 @@
-package StaticUse.StaticMethod;
 
 public class Test {
     public static void main(String[] args) {

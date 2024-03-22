@@ -1,4 +1,4 @@
-package StaticUse.StaticMethod;
+
 
 public class StaticMethod {
 
