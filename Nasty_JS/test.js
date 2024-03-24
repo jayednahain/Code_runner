@@ -896,23 +896,57 @@ function hairabba(number) {
 // higher order function
 //example
 
-const withLog = (func) => {
+// const withLog = (func) => {
 
-    return (...args) => {
+//     return (...args) => {
         
-        console.log(args)
+//         console.log(args)
         
         
-        console.log(`Calling function with arguments: ${args}`);
+//         console.log(`Calling function with arguments: ${args}`);
         
-        const result = func(...args);
+//         const result = func(...args);
 
-        console.log(`Function result: ${result}`);
+//         console.log(`Function result: ${result}`);
         
-        return result;
-    };
-};
+//         return result;
+//     };
+// };
 
-const add = (a, b) => a + b;
-const loggedAdd = withLog(add);
-loggedAdd(2, 3);
+// const add = (a, b) => a + b;
+// const loggedAdd = withLog(add);
+// loggedAdd(2, 3);
+
+
+//219
+// https://leetcode.com/problems/contains-duplicate-ii/submissions/1212840797/
+// using hash table as object
+function containsNearbyDuplicate(nums, k) {
+    const map = {};
+    for (let i = 0; i < nums.length; i++) {
+        if (map.hasOwnProperty(nums[i]) && i - map[nums[i]] <= k) {
+            console.log("--: ",map)
+            return true;
+        }
+        map[nums[i]] = i;
+        console.log(map)
+    }
+    return false;
+}
+// using direct map
+// function containsNearbyDuplicate(nums, k) {
+//     const map = new Map();
+//     for (let i = 0; i < nums.length; i++) {
+//         if (map.has(nums[i]) && i - map.get(nums[i]) <= k) {
+//             console.log("---",map)
+//             return true;
+//         }
+//         map.set(nums[i], i);
+//         console.log(map)
+//     }
+//     return false;
+// }
+
+const nums2 = [4,5,6,55,66,77];
+const k2 = 1;
+console.log(containsNearbyDuplicate(nums2, k2)); 
