@@ -1,7 +1,5 @@
 package VariableTypes.InstanceVariable;
 
-import OOB.Ex1.Box;
-
 public class InstanceVariableHiding {
     double height, width, depth;
 
