@@ -947,6 +947,17 @@ function containsNearbyDuplicate(nums, k) {
 //     return false;
 // }
 
-const nums2 = [4,5,6,55,66,77];
-const k2 = 1;
-console.log(containsNearbyDuplicate(nums2, k2)); 
+// const nums2 = [4,5,6,55,66,77];
+// const k2 = 1;
+// console.log(containsNearbyDuplicate(nums2, k2)); 
+
+//220
+// https://leetcode.com/problems/contains-duplicate-iii/description/
+
+
+var containsNearbyAlmostDuplicate = function(nums, indexDiff, valueDiff) {
+    i - j <= valueDiff;
+
+    
+};
+console.log(containsNearbyAlmostDuplicate())
