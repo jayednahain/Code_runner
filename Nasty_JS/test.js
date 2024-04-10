@@ -953,11 +953,21 @@ function containsNearbyDuplicate(nums, k) {
 
 //220
 // https://leetcode.com/problems/contains-duplicate-iii/description/
-
-
 var containsNearbyAlmostDuplicate = function(nums, indexDiff, valueDiff) {
-    i - j <= valueDiff;
-
     
+    // i - j <= indexDiff;
+    // nums[i] - nums[j] <= valueDiff;
+    
+    for (let i = 0; i < nums.length; i++) {
+        console.log(nums[i])
+        if (nums[i])
+    }
 };
-console.log(containsNearbyAlmostDuplicate())
+
+var num = [1, 3, 5, 7, 9];
+var index = 2;
+var value = 2;
+console.log(containsNearbyAlmostDuplicate(num,index,value))
+
+// 88
+// https://leetcode.com/problems/merge-sorted-array/description/
