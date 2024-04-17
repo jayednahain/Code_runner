@@ -975,3 +975,29 @@ console.log(containsNearbyAlmostDuplicate(num,index,value))
 //682
 // https://leetcode.com/problems/baseball-game/description/
 
+
+var calPoints = function(operations) {
+    let newList = [];
+    for (const item of operations) {
+        switch (item) {
+            case "C":
+                newList.pop();
+                break;
+            case "D":
+                newList.push(newList[newList.length - 1] * 2);
+                break;
+            case "+":
+                newList.push(newList[newList.length-1] + newList[newList.length-2]);
+                break;
+            
+            default:
+                //sending all the number as int
+                // for doing all the operations
+                newList.push(parseInt(item))
+        }
+    }
+    return newList.reduce((acc, curr) => acc + curr, 0);
+};
+
+console.log(calPoints(["5","2","C","D","+"]))
+// console.log(calPoints(["C"]))
