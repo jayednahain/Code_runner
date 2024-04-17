@@ -998,8 +998,16 @@ var calPoints = function(operations) {
     }
     return newList.reduce((acc, curr) => acc + curr, 0);
 };
-console.log(calPoints(["5","2","C","D","+"]))
+// console.log(calPoints(["5","2","C","D","+"]))
 // console.log(calPoints(["C"]))
 
 //20
 // https://leetcode.com/problems/valid-parentheses/description/
+
+var isValid = function(s) {
+    console.log(s)
+    
+};
+console.log(isValid("()"))
+
+//https://leetcode.com/problems/min-stack/description/
