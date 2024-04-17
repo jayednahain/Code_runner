@@ -958,10 +958,10 @@ var containsNearbyAlmostDuplicate = function(nums, indexDiff, valueDiff) {
     // i - j <= indexDiff;
     // nums[i] - nums[j] <= valueDiff;
     
-    for (let i = 0; i < nums.length; i++) {
-        console.log(nums[i])
-        if (nums[i])
-    }
+    // for (let i = 0; i < nums.length; i++) {
+    //     console.log(nums[i])
+    //     if (nums[i])
+    // }
 };
 
 var num = [1, 3, 5, 7, 9];
@@ -971,3 +971,7 @@ console.log(containsNearbyAlmostDuplicate(num,index,value))
 
 // 88
 // https://leetcode.com/problems/merge-sorted-array/description/
+
+//682
+// https://leetcode.com/problems/baseball-game/description/
+
