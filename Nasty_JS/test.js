@@ -998,6 +998,8 @@ var calPoints = function(operations) {
     }
     return newList.reduce((acc, curr) => acc + curr, 0);
 };
-
 console.log(calPoints(["5","2","C","D","+"]))
 // console.log(calPoints(["C"]))
+
+//20
+// https://leetcode.com/problems/valid-parentheses/description/
