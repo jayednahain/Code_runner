@@ -1005,9 +1005,22 @@ var calPoints = function(operations) {
 // https://leetcode.com/problems/valid-parentheses/description/
 
 var isValid = function(s) {
-    console.log(s)
+    // console.log(s)
+    const brackets = { '(': ')', '{': '}', '[': ']' };
+    const newList = [];
+    for (let item of s) {
+        // console.log(item)
+        if(brackets[item]){
+            newList.push(item)
+        }
+        else if (Object.values(brackets).includes(item)){
+            console.log(item)
+        }
+    }
+
+    return newList
     
 };
-console.log(isValid("()"))
+console.log(isValid("()(({}[]("))
 
 //https://leetcode.com/problems/min-stack/description/
