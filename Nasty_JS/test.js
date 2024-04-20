@@ -1009,18 +1009,29 @@ var isValid = function(s) {
     const brackets = { '(': ')', '{': '}', '[': ']' };
     const newList = [];
     for (let item of s) {
+        console.log("item: ",item)
         // console.log(item)
         if(brackets[item]){
+            console.log("item:push ",item)
             newList.push(item)
         }
         else if (Object.values(brackets).includes(item)){
-            console.log(item)
+            console.log("item: values ",item)
+            if (!newList.length || brackets[newList.pop()] !== item) {
+                console.log("item: ",item)
+                console.log("newList.pop(): ",newList.pop())
+                console.log("brackets[newList.pop()] : ", brackets[newList.pop()])
+                // return false;
+            }
+        }
+        else {
+            return false
         }
     }
 
-    return newList
+    return newList.length === 0;
     
 };
-console.log(isValid("()(({}[]("))
+console.log(isValid("(((){}[]"))
 
 //https://leetcode.com/problems/min-stack/description/
