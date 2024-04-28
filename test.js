@@ -967,7 +967,7 @@ var containsNearbyAlmostDuplicate = function(nums, indexDiff, valueDiff) {
 var num = [1, 3, 5, 7, 9];
 var index = 2;
 var value = 2;
-console.log(containsNearbyAlmostDuplicate(num,index,value))
+// console.log(containsNearbyAlmostDuplicate(num,index,value))
 
 // 88
 // https://leetcode.com/problems/merge-sorted-array/description/
@@ -1003,7 +1003,6 @@ var calPoints = function(operations) {
 
 //20
 // https://leetcode.com/problems/valid-parentheses/description/
-
 var isValid = function(s) {
     // console.log(s)
     const brackets = { '(': ')', '{': '}', '[': ']' };
@@ -1032,6 +1031,79 @@ var isValid = function(s) {
     return newList.length === 0;
     
 };
-console.log(isValid("(((){}[]"))
+// console.log(isValid("(((){}[]"))
 
+
+// 115
 //https://leetcode.com/problems/min-stack/description/
+
+
+function MinStack() {
+    this.stack = [];
+    this.min = [];
+}
+
+MinStack.prototype.push = function(x) {
+    if (this.stack.length == 0) {
+        this.min.push(x);
+    }
+    else {
+        let minEle = Math.min(this.stack[this.stack.length - 1], x)
+        console.log(minEle)
+        this.min.push(minEle)
+
+    }
+    this.stack.push(x)
+};
+
+MinStack.prototype.pop() = function name() {
+    this.stack.pop();
+    this.min.pop();
+}
+
+MinStack.prototype.top = function () {
+    return this.stack[this.stack.length-1]
+}
+
+MinStack.prototype.getMin = function () {
+    return this.min[this.min.length-1]
+    
+}
+
+
+
+// Example usage
+
+
+
+
+const myMinStack = new MinStack();
+let dataTest = [5, 6, 2, 1, 4,10,12,-2,-4]
+
+for (let i = 0; i < dataTest.length; i++) {
+    console.log(dataTest[i])
+    myMinStack.push(dataTest[i]);
+}
+
+console.log(myMinStack.stack)
+// console.log(MinStack.push())
+// for
+// MinStack.prototype.push = function(x) {
+    
+//     // if there is no item inside stack 
+//     if (this.stack.length == 0) {
+//         this.minStack.push(x)
+//     }
+    
+// }
+
+
+// console.log(MinStack.push("5"))
+// console.log(MinStack.stack);
+
+
+
+
+
+
+
