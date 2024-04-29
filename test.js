@@ -1048,7 +1048,7 @@ MinStack.prototype.push = function(x) {
         this.min.push(x);
     }
     else {
-        let minEle = Math.min(this.stack[this.stack.length - 1], x)
+        let minEle = Math.min(this.min[this.min.length - 1], x)
         console.log(minEle)
         this.min.push(minEle)
 
@@ -1070,40 +1070,24 @@ MinStack.prototype.getMin = function () {
     
 }
 
-
-
 // Example usage
-
-
-
 
 const myMinStack = new MinStack();
 let dataTest = [5, 6, 2, 1, 4,10,12,-2,-4]
 
-for (let i = 0; i < dataTest.length; i++) {
-    console.log(dataTest[i])
-    myMinStack.push(dataTest[i]);
-}
-
-console.log(myMinStack.stack)
-// console.log(MinStack.push())
-// for
-// MinStack.prototype.push = function(x) {
-    
-//     // if there is no item inside stack 
-//     if (this.stack.length == 0) {
-//         this.minStack.push(x)
-//     }
-    
+// for (let i = 0; i < dataTest.length; i++) {
+//     console.log(dataTest[i])
+//     myMinStack.push(dataTest[i]);
 // }
 
-
-// console.log(MinStack.push("5"))
-// console.log(MinStack.stack);
+// console.log(myMinStack.stack)
 
 
 
-
+//206
+// https://leetcode.com/problems/reverse-linked-list/
+//21
+// https://leetcode.com/problems/merge-two-sorted-lists/description/
 
 
 
