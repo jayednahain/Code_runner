@@ -1036,8 +1036,6 @@ var isValid = function(s) {
 
 // 115
 //https://leetcode.com/problems/min-stack/description/
-
-
 function MinStack() {
     this.stack = [];
     this.min = [];
@@ -1071,12 +1069,7 @@ MinStack.prototype.getMin = function () {
 }
 
 
-
 // Example usage
-
-
-
-
 const myMinStack = new MinStack();
 let dataTest = [5, 6, 2, 1, 4,10,12,-2,-4]
 
@@ -1086,20 +1079,13 @@ for (let i = 0; i < dataTest.length; i++) {
 }
 
 console.log(myMinStack.stack)
-// console.log(MinStack.push())
-// for
-// MinStack.prototype.push = function(x) {
-    
-//     // if there is no item inside stack 
-//     if (this.stack.length == 0) {
-//         this.minStack.push(x)
-//     }
-    
-// }
 
+//206
+// https://leetcode.com/problems/reverse-linked-list/
 
-// console.log(MinStack.push("5"))
-// console.log(MinStack.stack);
+//21
+// https://leetcode.com/problems/merge-two-sorted-lists/
+
 
 
 
