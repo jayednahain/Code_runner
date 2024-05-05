@@ -1036,8 +1036,6 @@ var isValid = function(s) {
 
 // 115
 //https://leetcode.com/problems/min-stack/description/
-
-
 function MinStack() {
     this.stack = [];
     this.min = [];
