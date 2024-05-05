@@ -7,54 +7,54 @@
 //      else return 6 - n
 
 
-     // if (!/[A-Z]/.test(password)) counter = counter + 1; //A=1
-     // if (!/[a-z]/.test(password)) counter = counter + 1; //a=1
-     // if (!/[\d]/.test(password)) counter = counter + 1; // 1= 1
-     // if (!(/[!@#$%^&*()--+]/.test(password))) counter = counter + 1; // # = 1
-     // if (counter >= 6 - n) { return counter }
-     // else {return 6 - n}
-     // if ( password.length < 6) return 6-password.length ;
+// if (!/[A-Z]/.test(password)) counter = counter + 1; //A=1
+// if (!/[a-z]/.test(password)) counter = counter + 1; //a=1
+// if (!/[\d]/.test(password)) counter = counter + 1; // 1= 1
+// if (!(/[!@#$%^&*()--+]/.test(password))) counter = counter + 1; // # = 1
+// if (counter >= 6 - n) { return counter }
+// else {return 6 - n}
+// if ( password.length < 6) return 6-password.length ;
 // }
 // console.log(minimumNumber(7,"AUzs-nV"));
 
 
 function caesarCipher(s, k) {
-     const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-     const upperCase = lowerCase.toLocaleUpperCase();
-     let newData =  s.split('').map((value, index) => {
-          if (/[A-Za-z]/.test(value)) {
-               if (value == value.toUpperCase()) {
-                    let newUp = upperCase.indexOf(value) + k
-                    var i,j = 0;
-                    // var j = 0;
-                    for (i; i < newUp; i++) {
-                         const element = lowerCase.split('')[j];   
-                         if (j >= lowerCase.split('').length - 1) {
-                              j = 0
-                         } else {
-                              j++;  
-                         }
-                         console.log(element)
+    const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    const upperCase = lowerCase.toLocaleUpperCase();
+    let newData = s.split('').map((value, index) => {
+        if (/[A-Za-z]/.test(value)) {
+            if (value == value.toUpperCase()) {
+                let newUp = upperCase.indexOf(value) + k
+                var i, j = 0;
+                // var j = 0;
+                for (i; i < newUp; i++) {
+                    const element = lowerCase.split('')[j];
+                    if (j >= lowerCase.split('').length - 1) {
+                        j = 0
+                    } else {
+                        j++;
                     }
-                   
-                    // for (let item = 0; item < newUp; item++) {
-                    //      const element = array[item];
-                         
-                    //     }
-                
-                    return upperCase.charAt(newUp)
-               }
-               else {
-                    let newLow = lowerCase.indexOf(value) + k; 
-                    if (newLow > 26) { 
-                         newLow = newLow- 26;
-                    }
-                    return lowerCase.charAt(newLow);
-               } 
-          }
-          else { return value; } 
-     })
-     return newData.join('');
+                    console.log(element)
+                }
+
+                // for (let item = 0; item < newUp; item++) {
+                //      const element = array[item];
+
+                //     }
+
+                return upperCase.charAt(newUp)
+            }
+            else {
+                let newLow = lowerCase.indexOf(value) + k;
+                if (newLow > 26) {
+                    newLow = newLow - 26;
+                }
+                return lowerCase.charAt(newLow);
+            }
+        }
+        else { return value; }
+    })
+    return newData.join('');
 }
 
 
@@ -74,7 +74,7 @@ function caesarCipher(s, k) {
 //                     if (newUp > 26) { 
 //                         for (let item = 0; item < newUp; item++) {
 //                          const element = array[item];
-                         
+
 //                         }
 //                     }
 //                     return upperCase.charAt(newUp)
@@ -99,10 +99,10 @@ function caesarCipher(s, k) {
 //      const element = listData[item];
 //      if (listData.length)
 //      console.log(element);
-     
+
 // }
 // while (condition) {
-     
+
 // }
 
 
@@ -127,10 +127,10 @@ function caesarCipher(s, k) {
 // let j = 0;
 // for (let index = 0; index < 2; index++) {
 //      for (j = 0; j < 5; j++){
-       
+
 //      }
-    
-     
+
+
 // }
 
 // var index = 0;
@@ -164,18 +164,18 @@ function caesarCipher(s, k) {
 
 
 
-          // return value.split("").reverse().join("")
+// return value.split("").reverse().join("")
 
 // function revMe(data) {
 //      let newData = data && typeof data == 'string' ?
-          
+
 //           data.split(" ").map((value, _) => {
 //                value = value.
 
-          
+
 //                return /[A-Za-z]/.test(value)?value.split("").reverse().join(""): value
 //           })
-          
+
 //           : null;
 //      return newData?newData.join(" "):null
 // }
@@ -202,8 +202,8 @@ function caesarCipher(s, k) {
 //           let rev=[];
 //           for (let i = value.length - 1; i >= 0; i--) {
 //                rev.push(value[i])
-               
-               
+
+
 //                // console.log(value.split("")[i]);
 //                // return value.split("")[i]
 //           }
@@ -211,7 +211,7 @@ function caesarCipher(s, k) {
 //      });
 //       return newData.join(" ")
 // }
- 
+
 // console.log(revMe("jayed nahian! data")); 
 
 
@@ -221,13 +221,13 @@ function caesarCipher(s, k) {
 //      console.log("str -1: "+str.length-1)
 //      let r = "";
 //      for ( let i = str.length - 1; i >= 0; i--){
-          
+
 //      console.log(i);
 //        r += str[i];
 //      }
 //      return r;
 // }
-    
+
 
 // console.log(reverse1("jayed"));
 // let dataList = [1,5,8,4,7,3,9]
@@ -236,7 +236,7 @@ function caesarCipher(s, k) {
 //      let j = i + 1
 //      // do some thing !
 //      console.log("i==",i,'j====',j)
-     
+
 //      // console.log(dataList[i])
 // }
 
@@ -256,115 +256,115 @@ function caesarCipher(s, k) {
 // function test(s) {
 
 
-     // let var1 = "";
-     //      for (let i = 0; i < s.length-1; i++) {
-     //           var1 = `${s[i]}${s[i + 1]}`
-     //                // console.log("shift========// "+ var1)
-     //                let var2 = "";
-     //                for (let j = i+1; j < s.length-1; j++) {
-     //                          var2 = `${s[j]}${s[j + 1]}`;
-     //                          // console.log("/"+ var2)
+// let var1 = "";
+//      for (let i = 0; i < s.length-1; i++) {
+//           var1 = `${s[i]}${s[i + 1]}`
+//                // console.log("shift========// "+ var1)
+//                let var2 = "";
+//                for (let j = i+1; j < s.length-1; j++) {
+//                          var2 = `${s[j]}${s[j + 1]}`;
+//                          // console.log("/"+ var2)
 
-     //                }
-     //           if (var1 == var2) {
-     //                     console.log("true")
-     //                }
-     //           else {
-     //                console.log("false")
-     //           }
-     //      }
-     // console.log(s)
+//                }
+//           if (var1 == var2) {
+//                     console.log("true")
+//                }
+//           else {
+//                console.log("false")
+//           }
+//      }
+// console.log(s)
 
-     // for (let i = 0; i < array.length; i++) {
-     //      // const element = array[i];
-     // }
+// for (let i = 0; i < array.length; i++) {
+//      // const element = array[i];
+// }
 
-     // console.log(s.length);
+// console.log(s.length);
 
-     // let str = '';
+// let str = '';
 
-     // for (i = 0; i <= 5; i++) {
-     //      // console.log("----")
-     //      for (j = 1; j <= i; j++) {
-     //           console.log("$")
-     //           str += "*";
-     //      }
-     //      str += '\n';
+// for (i = 0; i <= 5; i++) {
+//      // console.log("----")
+//      for (j = 1; j <= i; j++) {
+//           console.log("$")
+//           str += "*";
+//      }
+//      str += '\n';
 
-     // }
-     // console.log(str);
+// }
+// console.log(str);
 
-     // for (let i = 0; i < s.length; i++) {
-     //      console.log(s[i]);
-     // }
-
-
-     // console.log(s.length % 2==0);
-     // if (s.length % 2 == 0) {
-     //      for (let i = 0; i < s.length; i++) {
-               
-     //      }
-     // }
-     // else {
-     //      return "false"
-     // }
-     
+// for (let i = 0; i < s.length; i++) {
+//      console.log(s[i]);
+// }
 
 
-     // for (let i = 0; i < parseInt(s.length/ 2); i++) {
-          
-     //      var2 = `${s[i]}${s[i + 1]}`;
-     //      console.log(var2)
-     
-     // }
+// console.log(s.length % 2==0);
+// if (s.length % 2 == 0) {
+//      for (let i = 0; i < s.length; i++) {
 
-     
-     // for (let k = 0; k < s.length; k++) {
-     //      console.log("++++++++")
-     // let var1 = "";
-     // let shifter = 0;
-     // for (let i = 0; i < parseInt(s.length / 2); i++) {
-               
-          
-     //      var1 = `${s[i]}${s[i + shifter]}`;
-     //           let var2 = "";
-     //           for (let j = i + 1; j < s.length; j++) {
-     //                var2 = `${s[j]}${s[j + shifter]}`;
-     //                console.log("/"+ var2)
-     //           }
-     //           shifter = shifter+1
-     //           console.log("shift-- "+ var1)
-     //      }
-          
-     // }
-
-     // console.log("total lenght: " + s.length)
-     // console.log("running cycle: " + parseInt(s.length / 2))
-
-     // let flag = '';
-     // for (let i = 0; i < parseInt(s.length / 2); i++) {
-     //      let temp = "";
-     //      for (let j = 0; j <= i; j++) {temp += s[j];}
-     //      console.log("temp data:========== " + temp)
-     //      let runningTemp = "";
+//      }
+// }
+// else {
+//      return "false"
+// }
 
 
-     //      for (let i = 0; i < s.length - 1; i += temp.length) {
-     //           runningTemp = s.substr(i, temp.length)
-     //           console.log("=========="+runningTemp)
-     //           if (temp != runningTemp) {
-     //                console.log("--" + false)
-     //           }
-     //           else {
-     //                console.log("--" + true)
-     //                flag = true;
 
-     //           }
-     //      }
-         
-     // }
+// for (let i = 0; i < parseInt(s.length/ 2); i++) {
 
-     
+//      var2 = `${s[i]}${s[i + 1]}`;
+//      console.log(var2)
+
+// }
+
+
+// for (let k = 0; k < s.length; k++) {
+//      console.log("++++++++")
+// let var1 = "";
+// let shifter = 0;
+// for (let i = 0; i < parseInt(s.length / 2); i++) {
+
+
+//      var1 = `${s[i]}${s[i + shifter]}`;
+//           let var2 = "";
+//           for (let j = i + 1; j < s.length; j++) {
+//                var2 = `${s[j]}${s[j + shifter]}`;
+//                console.log("/"+ var2)
+//           }
+//           shifter = shifter+1
+//           console.log("shift-- "+ var1)
+//      }
+
+// }
+
+// console.log("total lenght: " + s.length)
+// console.log("running cycle: " + parseInt(s.length / 2))
+
+// let flag = '';
+// for (let i = 0; i < parseInt(s.length / 2); i++) {
+//      let temp = "";
+//      for (let j = 0; j <= i; j++) {temp += s[j];}
+//      console.log("temp data:========== " + temp)
+//      let runningTemp = "";
+
+
+//      for (let i = 0; i < s.length - 1; i += temp.length) {
+//           runningTemp = s.substr(i, temp.length)
+//           console.log("=========="+runningTemp)
+//           if (temp != runningTemp) {
+//                console.log("--" + false)
+//           }
+//           else {
+//                console.log("--" + true)
+//                flag = true;
+
+//           }
+//      }
+
+// }
+
+
 
 
 //      for (let i = 0; i < parseInt(s.length / 2); i++) {
@@ -376,7 +376,7 @@ function caesarCipher(s, k) {
 //           let runningTemp = "";
 
 //           for (let k = i + 1; k < s.length - 1; k += temp.length) {
-               
+
 //                runningTemp = s.substr(k, temp.length)
 
 //                // console.log("==========" + runningTemp)
@@ -410,55 +410,55 @@ function caesarCipher(s, k) {
 
 
 // function subStringFinder(s) {
-     // for (let i = 0; i < parseInt(s.length / 2); i++) {
-     //      let temp = "";
+// for (let i = 0; i < parseInt(s.length / 2); i++) {
+//      let temp = "";
 
-     //      for (let j = 0; j <= i; j++) {
-     //           temp += s[j];
-     //      }
-     //      let flag = true;
-     //      for (let k = i+1; k < s.length - 1; k += temp.length) {
-     //           // runningTemp = s.substr(i, temp.length)
-     //           let runningTemp = s.substr(k, temp.length);
-     //           if (temp != runningTemp) {
-     //                flag = false;
-     //                break;
-     //           }
-     //           if (flag) {
-     //                return true;
-     //            }
-     //           // if (temp != runningTemp) {flag =false}
-     //           // else {flag = true;}
-               
-     //      }
-     // }
-     // return false;
+//      for (let j = 0; j <= i; j++) {
+//           temp += s[j];
+//      }
+//      let flag = true;
+//      for (let k = i+1; k < s.length - 1; k += temp.length) {
+//           // runningTemp = s.substr(i, temp.length)
+//           let runningTemp = s.substr(k, temp.length);
+//           if (temp != runningTemp) {
+//                flag = false;
+//                break;
+//           }
+//           if (flag) {
+//                return true;
+//            }
+//           // if (temp != runningTemp) {flag =false}
+//           // else {flag = true;}
+
+//      }
+// }
+// return false;
 
 
 
-     // for (let i = 0; i < parseInt(s.length / 2); i++) {
-     //      let temp = s.substr(0, i + 1);
-     //      let flag = true;
-  
-     //      for (let j = i + 1; j < s.length; j += temp.length) {
-     //          let runningTemp = s.substr(j, temp.length);
-  
-     //          if (temp !== runningTemp) {
-     //              flag = false;
-     //              break;
-     //          }
-     //      }
+// for (let i = 0; i < parseInt(s.length / 2); i++) {
+//      let temp = s.substr(0, i + 1);
+//      let flag = true;
 
-     //      if (flag) {
-     //          return true;
-     //      }
-     //  }
-  
-     //  return false;
-     
-     
-     
-     
+//      for (let j = i + 1; j < s.length; j += temp.length) {
+//          let runningTemp = s.substr(j, temp.length);
+
+//          if (temp !== runningTemp) {
+//              flag = false;
+//              break;
+//          }
+//      }
+
+//      if (flag) {
+//          return true;
+//      }
+//  }
+
+//  return false;
+
+
+
+
 // }
 
 // console.log(subStringFinder("ababc"))
@@ -510,7 +510,7 @@ function caesarCipher(s, k) {
 //      // for (let i = 0; i < nums.length; i++) {
 //      //      console.log(nums[i])
 //      // }
-     
+
 // }
 
 // console.log(test([1,2,3,4,5,6,7]))
@@ -527,7 +527,7 @@ function caesarCipher(s, k) {
 //     }
 
 //     return temp;
-    
+
 // }
 
 
@@ -551,34 +551,34 @@ function caesarCipher(s, k) {
 // catch(e){console.log(e.message)}
 
 class BankAccount {
-     constructor(accountNumber) {
-       // Encapsulated properties
-       let _accountNumber = accountNumber;
-       let _balance = 0;
-   
-       // Public methods to interact with the object
-       this.getAccountNumber = () => _accountNumber;
-       this.getBalance = () => _balance;
-       this.deposit = (amount) => {
-         _balance += amount;
-       };
-       this.withdraw = (amount) => {
-         if (amount <= _balance) {
-           _balance -= amount;
-         } else {
-           console.log('Insufficient balance.');
-         }
-       };
-     }
-   }
-   
-   // Create a BankAccount object
-   const account = new BankAccount('12345');
-   
-   // Access properties through methods (encapsulation)
+    constructor(accountNumber) {
+        // Encapsulated properties
+        let _accountNumber = accountNumber;
+        let _balance = 0;
+
+        // Public methods to interact with the object
+        this.getAccountNumber = () => _accountNumber;
+        this.getBalance = () => _balance;
+        this.deposit = (amount) => {
+            _balance += amount;
+        };
+        this.withdraw = (amount) => {
+            if (amount <= _balance) {
+                _balance -= amount;
+            } else {
+                console.log('Insufficient balance.');
+            }
+        };
+    }
+}
+
+// Create a BankAccount object
+const account = new BankAccount('12345');
+
+// Access properties through methods (encapsulation)
 //    console.log('Account Number:', account.getAccountNumber()); // Output: '12345'
 //    console.log('Balance:', account.getBalance());               // Output: 0
-   
+
 //    // Deposit and withdraw funds
 //    account.deposit(500);
 //    account.withdraw(500);
@@ -588,25 +588,25 @@ class BankAccount {
 // let arr_two = [4,5,6];
 
 
-function medianOfArray(array){
+function medianOfArray(array) {
     var length = array.length;
 
-     //find odd number
-    if (length % 2==1){
-        
+    //find odd number
+    if (length % 2 == 1) {
+
         //3,5,7 something
         // find the index
-        let index = Math.floor(length/2);
+        let index = Math.floor(length / 2);
 
         // search va lue with the index;
-        return array[index] ;
+        return array[index];
     }
-    
+
     //find even
     //4,8,10
-    else{
-        
-        return (array[length/2]+array[length/2-1])/2;
+    else {
+
+        return (array[length / 2] + array[length / 2 - 1]) / 2;
         // return(length/2)
     }
 
@@ -620,30 +620,30 @@ function medianOfArray(array){
 // catch(e){console.log(e.message)}
 
 
-class Node {
-     constructor(value){
-          this.value = value; // current node value 
-          this.next = null;
-     }
-}
+// class Node {
+//      constructor(value){
+//           this.value = value; // current node value 
+//           this.next = null;
+//      }
+// }
 
 //creating nodes
-const a = new Node('A');
-const b = new Node('B');
-const c = new Node('C');
-const d = new Node('D');
-const e = new Node('E');
+// const a = new Node('A');
+// const b = new Node('B');
+// const c = new Node('C');
+// const d = new Node('D');
+// const e = new Node('E');
 
 // connect one node to another node
-a.next = b;
-b.next = c;
-d.next = e;
+// a.next = b;
+// b.next = c;
+// d.next = e;
 
-//show link list
-function showLinkList(head) {
-     let current = head;
-     console.log(current)
-}
+// //show link list
+// function showLinkList(head) {
+//      let current = head;
+//      console.log(current)
+// }
 
 
 // try{
@@ -658,7 +658,7 @@ function showLinkList(head) {
 // 	for (let i = 0; i < nums.length; i++) {
 // 		// let currentElement = nums[i];
 // 		let difference = target - nums[i];
-		
+
 // 		if (hasTable[nums[i]] != undefined){
 
 // 			console.log("-----"+JSON.stringify(hasTable) )
@@ -677,29 +677,29 @@ function findSum(arr, target) {
 
     while (left < right) {
         let sum = arr[left] + arr[right];
-		console.log("current sum: "+ sum)
+        console.log("current sum: " + sum)
         if (sum === target) {
-            return [ arr[left] ,arr[right] ];
+            return [arr[left], arr[right]];
         } else if (sum < target) {
-			console.log("++++++++++++")
+            console.log("++++++++++++")
             left++;
         } else {
-			console.log("------------")
+            console.log("------------")
             right--;
         }
     }
     return -1;
 }
 
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
     let obj = {};
     for (let i = 0; i < nums.length; i++) {
-        if (obj[nums[i]] != undefined){
+        if (obj[nums[i]] != undefined) {
             return [i, obj[nums[i]]]
         }
-        else{
+        else {
             //set the difference on hastable
-            obj[target- nums[i]]=i;
+            obj[target - nums[i]] = i;
         }
     }
 };
@@ -716,7 +716,7 @@ var isAnagram = function (s, t) {
     console.log("____________")
 
     for (let i of t) {
-        
+
         if (table[i] == undefined) {
             // (!table[i])
             //check this index has values or not
@@ -737,7 +737,7 @@ findFrequency = (words, letter) => {
     let table = {};
     for (let i of words) {
         table[i] = (table[i] || 0) + 1
-        
+
     }
     return table[letter]
 }
@@ -751,7 +751,7 @@ function medianOfArray(array) {
     if (array.length % 2 == 1) {
         return array[Math.floor(array.length / 2)]
     }
-    else { 
+    else {
 
         return (array)
     }
@@ -826,10 +826,10 @@ const removeDuplicates = (nums, j = 0) => {
     }
     return ++j;
 };
-*/ 
+*/
 
 
-removeDuplicates =(nums)=> {
+removeDuplicates = (nums) => {
 
     // let temp=[];
     // for (let i = 0; i < nums.length - 1; i++) {
@@ -843,7 +843,7 @@ removeDuplicates =(nums)=> {
 
     return [... new Set(nums)].length
 
-    
+
 };
 
 
@@ -855,10 +855,10 @@ function hairabba(number) {
         if (number > i) {
             console.log(i)
         }
-        if (number <= i ) {
+        if (number <= i) {
             console.log(i - reduce);
-            reduce = reduce +2
-        } 
+            reduce = reduce + 2
+        }
     }
 }
 
@@ -885,7 +885,7 @@ function hairabba(number) {
 // https://leetcode.com/problems/roman-to-integer/description/
 // var romanToInt = function(s) {
 //     console.log(s)
-    
+
 // };
 
 // try {
@@ -899,16 +899,16 @@ function hairabba(number) {
 // const withLog = (func) => {
 
 //     return (...args) => {
-        
+
 //         console.log(args)
-        
-        
+
+
 //         console.log(`Calling function with arguments: ${args}`);
-        
+
 //         const result = func(...args);
 
 //         console.log(`Function result: ${result}`);
-        
+
 //         return result;
 //     };
 // };
@@ -925,7 +925,7 @@ function containsNearbyDuplicate(nums, k) {
     const map = {};
     for (let i = 0; i < nums.length; i++) {
         if (map.hasOwnProperty(nums[i]) && i - map[nums[i]] <= k) {
-            console.log("--: ",map)
+            console.log("--: ", map)
             return true;
         }
         map[nums[i]] = i;
@@ -953,11 +953,11 @@ function containsNearbyDuplicate(nums, k) {
 
 //220
 // https://leetcode.com/problems/contains-duplicate-iii/description/
-var containsNearbyAlmostDuplicate = function(nums, indexDiff, valueDiff) {
-    
+var containsNearbyAlmostDuplicate = function (nums, indexDiff, valueDiff) {
+
     // i - j <= indexDiff;
     // nums[i] - nums[j] <= valueDiff;
-    
+
     // for (let i = 0; i < nums.length; i++) {
     //     console.log(nums[i])
     //     if (nums[i])
@@ -976,7 +976,7 @@ var value = 2;
 // https://leetcode.com/problems/baseball-game/description/
 
 
-var calPoints = function(operations) {
+var calPoints = function (operations) {
     let newList = [];
     for (const item of operations) {
         switch (item) {
@@ -987,9 +987,9 @@ var calPoints = function(operations) {
                 newList.push(newList[newList.length - 1] * 2);
                 break;
             case "+":
-                newList.push(newList[newList.length-1] + newList[newList.length-2]);
+                newList.push(newList[newList.length - 1] + newList[newList.length - 2]);
                 break;
-            
+
             default:
                 //sending all the number as int
                 // for doing all the operations
@@ -1003,22 +1003,22 @@ var calPoints = function(operations) {
 
 //20
 // https://leetcode.com/problems/valid-parentheses/description/
-var isValid = function(s) {
+var isValid = function (s) {
     // console.log(s)
     const brackets = { '(': ')', '{': '}', '[': ']' };
     const newList = [];
     for (let item of s) {
-        console.log("item: ",item)
+        console.log("item: ", item)
         // console.log(item)
-        if(brackets[item]){
-            console.log("item:push ",item)
+        if (brackets[item]) {
+            console.log("item:push ", item)
             newList.push(item)
         }
-        else if (Object.values(brackets).includes(item)){
-            console.log("item: values ",item)
+        else if (Object.values(brackets).includes(item)) {
+            console.log("item: values ", item)
             if (!newList.length || brackets[newList.pop()] !== item) {
-                console.log("item: ",item)
-                console.log("newList.pop(): ",newList.pop())
+                console.log("item: ", item)
+                console.log("newList.pop(): ", newList.pop())
                 console.log("brackets[newList.pop()] : ", brackets[newList.pop()])
                 // return false;
             }
@@ -1029,49 +1029,42 @@ var isValid = function(s) {
     }
 
     return newList.length === 0;
-    
+
 };
 // console.log(isValid("(((){}[]"))
 
 
 // 115
 //https://leetcode.com/problems/min-stack/description/
-function MinStack() {
-    this.stack = [];
-    this.min = [];
-}
+// function MinStack() {
+//     this.stack = [];
+//     this.min = [];
+// }
 
-MinStack.prototype.push = function(x) {
-    if (this.stack.length == 0) {
-        this.min.push(x);
-    }
-    else {
-        let minEle = Math.min(this.min[this.min.length - 1], x)
-        console.log(minEle)
-        this.min.push(minEle)
-
-    }
-    this.stack.push(x)
-};
-
-MinStack.prototype.pop() = function name() {
-    this.stack.pop();
-    this.min.pop();
-}
-
-MinStack.prototype.top = function () {
-    return this.stack[this.stack.length-1]
-}
-
-MinStack.prototype.getMin = function () {
-    return this.min[this.min.length-1]
-    
-}
-
+// MinStack.prototype.push = function(x) {
+//     if (this.stack.length == 0) {
+//         this.min.push(x);
+//     }
+//     else {
+//         let minEle = Math.min(this.min[this.min.length - 1], x)
+//         console.log(minEle)
+//         this.min.push(minEle)
+//     }
+//     this.stack.push(x)
+// };
+// MinStack.prototype.pop() = function name() {
+//     this.stack.pop();
+//     this.min.pop();
+// }
+// MinStack.prototype.top = function () {
+//     return this.stack[this.stack.length-1]
+// }
+// MinStack.prototype.getMin = function () {
+//     return this.min[this.min.length-1]
+// }
 // Example usage
-
-const myMinStack = new MinStack();
-let dataTest = [5, 6, 2, 1, 4,10,12,-2,-4]
+// const myMinStack = new MinStack();
+// let dataTest = [5, 6, 2, 1, 4,10,12,-2,-4]
 
 // for (let i = 0; i < dataTest.length; i++) {
 //     console.log(dataTest[i])
@@ -1083,6 +1076,36 @@ let dataTest = [5, 6, 2, 1, 4,10,12,-2,-4]
 
 
 //206
+
+class Node {
+    constructor(value) {
+        this.previous = null
+        this.value = value; // current node value 
+        this.next = null;
+    }
+}
+
+//creating nodes
+const a = new Node('A');
+const b = new Node('B');
+const c = new Node('C');
+const d = new Node('D');
+const e = new Node('E');
+
+// connect one node to another node
+// a.next = b;
+// b.next = c;
+// c.next = d;
+// d.next = e;
+
+
+//show link list
+function showLinkList(head) {
+    let current = head;
+    console.log(current)
+}
+
+showLinkList(b);
 // https://leetcode.com/problems/reverse-linked-list/
 //21
 // https://leetcode.com/problems/merge-two-sorted-lists/description/
