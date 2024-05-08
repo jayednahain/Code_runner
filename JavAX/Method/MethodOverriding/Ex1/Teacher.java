@@ -1,4 +1,4 @@
-package JavAX.Jav132Overridding;
+package JavAX.Method.MethodOverriding.Ex1;
 
 public class Teacher extends Person {
 
