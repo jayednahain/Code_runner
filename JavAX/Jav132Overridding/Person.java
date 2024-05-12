@@ -1,4 +1,4 @@
-package JavAX.Jav132Overridding;
+package Jav132Overridding;
 
 public class Person {
     String Name;

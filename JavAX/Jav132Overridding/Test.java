@@ -1,5 +1,4 @@
-package JavAX.Jav132Overridding;
-
+package Jav132Overridding;
 public class Test {
     public static void main(String[] args) {
         
