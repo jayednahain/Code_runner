@@ -1,9 +1,7 @@
 package Jav138superOverriddenMethod;
 
 public class ClassA {
-    
-    void displayMethod(){
-        System.out.println("Inside A Class");
+    ClassA() {
+        System.out.println("class A constructor Called");
     }
-
 }
