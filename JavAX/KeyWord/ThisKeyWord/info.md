@@ -102,7 +102,6 @@ void displayInfo() {
 ```
 
 ### Explicitly refers 
-
 - Makes it clear that the method being called belongs to the current instance of the class.
 - Useful for readability, especially in large classes or when the method name might be shadowed by a local variable.
 - Necessary when calling a method from within an anonymous inner class or when the method is shadowed by a parameter or local variable with the same name.
