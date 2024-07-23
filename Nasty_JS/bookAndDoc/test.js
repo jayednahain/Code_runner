@@ -90,19 +90,128 @@
 
 //apply call
 
-function runFun(message1,message2) {
-    console.log("this: ",this)
-    console.log(message1 , "|| ", message2 ," || " ,this.fName)
+// function runFun(message1,message2) {
+//     console.log("this: ",this)
+//     console.log(message1 , "|| ", message2 ," || " ,this.fName)
+// }
+
+// // runFun("hellow there")
+// let PersonObject = {
+//     fName:"jayed",
+//     lName:"nahian",
+//     age:45,
+// }
+
+// runFun.call(PersonObject,"zzz",["aaa"]);
+
+
+// const Vehicle = {
+//     wheel: 4,
+//     seat: 4,
+//     start() {
+//         console.log("insert key")
+//     },
+//     end: () => {
+//         console.log("insert key")
+//     }
+// }
+
+// let bmw = Object.create(Vehicle);
+// console.log(bmw.start())
+
+// let benz = Vehicle;
+// console.log(benz.end())
+
+// const CustomPromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let randomNumber = Math.floor(Math.random() * 10);
+//         console.log(randomNumber)
+//         if (randomNumber < 5) {
+//             resolve();
+//         }
+//         else {
+//             reject()
+//         }
+//     }, 1000)
+
+// }).then(()=>{
+//     console.log("then");
+// }).catch((err)=>{
+//     console.log("catch");
+// });
+// CustomPromise()
+// console.log(promise) 
+
+// const CustomPromise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let randomNumber = Math.floor(Math.random() * 10);
+//         console.log(randomNumber)
+//         if (randomNumber < 5) {
+//             resolve();
+//         }
+//         else {
+//             reject()
+//         }
+//     }, 1000)
+
+// });
+// const CustomPromise2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let randomNumber = Math.floor(Math.random() * 10);
+//         console.log(randomNumber)
+//         if (randomNumber < 5) {
+//             resolve();
+//         }
+//         else {
+//             reject()
+//         }
+//     }, 1000)
+
+// });
+// const CustomPromise3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let randomNumber = Math.floor(Math.random() * 10);
+//         console.log(randomNumber)
+//         if (randomNumber < 5) {
+//             resolve();
+//         }
+//         else {
+//             reject()
+//         }
+//     }, 1000)
+// });
+
+
+// Promise.all([CustomPromise1,CustomPromise2,CustomPromise3])
+//     .then()
+//     .catch((err)=>{
+//             console.log("catch");
+//         });
+
+
+let delay = (ms) => {
+    console.log("delay starting.... ")
+    return new Promise((resolve)=>{
+        console.log("delay promise block... ")
+        setTimeout(()=>{
+            console.log("delay resolved")
+            resolve();
+        },ms)
+    }).then(()=>{
+        console.log("delay complete..")
+    });
 }
 
-// runFun("hellow there")
-let PersonObject = {
-    fName:"jayed",
-    lName:"nahian",
-    age:45,
+async function TestAsync() {
+    console.log("TestAsync function run")
+
+    delay(3000); // not block the code
+    console.log("TestAsync Not blocked")
+
+    await delay(3000);
+    console.log("blocked")
+
 }
 
-runFun.call(PersonObject,"zzz",["aaa"]);
 
-
-
+TestAsync();
