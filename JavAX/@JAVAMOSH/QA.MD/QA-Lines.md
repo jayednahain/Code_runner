@@ -1,3 +1,0 @@
-- javas variable are static type;
-- null pointer exception are the popular exception in java
-- Java manage two diffrent area of memory
