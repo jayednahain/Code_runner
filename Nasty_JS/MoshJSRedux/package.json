@@ -1,0 +1,14 @@
+{
+  "name": "moshjsredux",
+  "version": "1.0.0",
+  "description": "just for pratice",
+  "main": "test.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "author": "jayednahian",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
