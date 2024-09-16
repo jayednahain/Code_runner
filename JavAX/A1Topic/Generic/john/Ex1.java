@@ -1,4 +1,5 @@
-package JavAX.A1Topic.Generic.john;
+package A1Topic.Generic.john;
+
 
 class GenericTypeTest<T> {
     T value;
@@ -27,3 +28,4 @@ public class Ex1 {
 
     }
 }
+
