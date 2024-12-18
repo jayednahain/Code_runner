@@ -1060,22 +1060,31 @@
 // };
 
 
-// https://leetcode.com/problems/single-number/
-var singleNumber = function (nums) {
-    let count = 0;
-    for (let i = 0; i < nums.length; i++) {
-        let isUnique = true
-        for (let j = i + 1; j < nums.length; j++) {
-            //nums[i] == nums[j] && nums[i] != nums[j]
-            //&& nums[i] != nums[j]
-            if (i !== j && nums[i] == nums[j] ) {
-                // console.log("-------: ",nums[i])
-                // console.log("---: ",nums[j] )
-                // count = count + 1;
-            }
-        }
-    }
-    console.log("countcount: ", count)
+// // https://leetcode.com/problems/single-number/
+// var singleNumber = function (nums) {
+//     let count = 0;
+//     for (let i = 0; i < nums.length; i++) {
+//         let isUnique = true
+//         for (let j = i + 1; j < nums.length; j++) {
+//             //nums[i] == nums[j] && nums[i] != nums[j]
+//             //&& nums[i] != nums[j]
+//             if (i !== j && nums[i] == nums[j] ) {
+//                 // console.log("-------: ",nums[i])
+//                 // console.log("---: ",nums[j] )
+//                 // count = count + 1;
+//             }
+//         }
+//     }
+//     console.log("countcount: ", count)
+// };
+
+// singleNumber([1,2,2,4,5,4,6])
+
+
+// https://leetcode.com/problems/merge-sorted-array/description/https://leetcode.com/problems/merge-sorted-array/description/
+
+var merge = function(nums1, m, nums2, n) {
+    
 };
 
-singleNumber([1,2,2,4,5,4,6])
+console.log(merge())
