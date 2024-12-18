@@ -26,15 +26,15 @@ interface mainTest {
 ## why we use interface?
 - interface
 
-## class relation
+### class relation
 - interface vs interface and class vs class **extends**
 - interface vs class **implements**
 
-## multiple inheritance problem
+### multiple inheritance problem
 <img src="Screenshot from 2024-09-10 15-47-15.png" width="800" title="hover text">
 
 
-## why java interface doesn't support constructor
+### why java interface doesn't support constructor
 In Java, interfaces don't support constructors because they are not meant to instantiate objects directly. Interfaces define a contract or blueprint for classes, specifying methods that must be implemented, but they do not provide implementation details themselves. Constructors, on the other hand, are specific to classes because they are used to initialize an object's state when it is created.
 
 Here’s why interfaces don't support constructors:

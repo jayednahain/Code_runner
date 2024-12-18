@@ -1,11 +1,12 @@
 package jav159AnonymousClass;
 
 class Person {
-    void showPersonName(){
+    void showPersonName() {
         System.out.println("this is original function method");
     }
 }
 
+// without Anonymous class
 class CustomPerson extends Person {
     @Override
     void showPersonName() {
