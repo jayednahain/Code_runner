@@ -27,3 +27,8 @@ int age = 25; // Correct
 age = 'twenty-five'; // Error: A string cannot be assigned to an int variable.
 ```
 ### Type Inference:
+
+
+# 9 https://www.youtube.com/watch?v=ZZ4VVlggIVk&list=PLptHs0ZDJKt_fLp8ImPQVc1obUJKDSQL7&index=10 
+### null safety
+
