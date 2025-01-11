@@ -21,7 +21,7 @@ void setThemeCase(ThemeMode theme) {
 
 void main(List<String> args) {
   setThemeConditions(0);
-  setThemeCase("null");
+  // setThemeCase("null");
 }
 
 enum gender { Male, Female, Unknown }
