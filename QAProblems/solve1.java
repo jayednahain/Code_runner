@@ -8,7 +8,7 @@ class main {
         
         Solution solution = new Solution();
 
-        // 349
+       
         int[] myArrayOne = { 1, 2, 3, 4, 5 };
         int[] myArrayTwo = { 1, 2, 3, 4, 4, 5 };
         
@@ -16,7 +16,6 @@ class main {
         for (int num : result) {
             System.out.print(num + " ");
         }
-
     }
 }
 
@@ -45,7 +44,4 @@ class Solution {
         return result;
     }
 
-    public int longestConsecutive(int[] nums) {
-
-    }
 }
